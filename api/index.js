@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // Health check endpoint
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('OAuth Proxy Server is running');
 });
 
