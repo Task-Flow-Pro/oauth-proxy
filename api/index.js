@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 
 // Health check endpoint
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.send('OAuth Proxy Server is running');
 });
 
 // Google OAuth callback handler
-app.get('/api/auth/google/callback', (req, res) => {
+app.get('/auth/google/callback', (req, res) => {
   const code = req.query.code;
   const error = req.query.error;
   const state = req.query.state; // This contains your Codespace URL
